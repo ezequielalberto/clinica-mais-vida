@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(212, 212, 212);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    padding: 20px 10px;
+    gap: 10px;
+    background-color: black;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+ul li a:hover{
+    cursor:pointer;
+    color: rgb(56, 126, 74);
+}
+.helpInfo div{
+    height: auto;
+    max-width: 600px;
+    margin: 10px auto;
+    background-color: white;
+    padding: 35px 25px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.13);
+}
+.helpInfo div h1{
+    color: black;
+    font-size: 28px;
+    padding-bottom: 12px;
+}
+.helpInfo div h2{
+    font-size:20px;
+    color: rgb(30, 30, 30);
+    margin-bottom: 6px;
+}
+.helpInfo div p{
+    color: black;
+    font-size: 14px;
+    text-align: justify;
+    margin: 0 auto 5px auto;
+}
+.helpInfo div p:last-child{
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100dvh;
+    max-width: 100dvw;
+    overflow-x: hidden !important;
+}
+
+.containerBlog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    width: 100dvw;
+    height: auto;
+    padding-block: 30px;
+}
+.navAuto, .navManual{
+    display: none !important;
+} 
+.actualizado{
+    width: 90dvw;
+    margin: auto;
+    padding: 10px;
+}
+.actualizado h1{
+    font-size: 2.3em;
+    color: #6091fc;
+}
+.SlideCardBlog{
+    width:100%;
+    height: 50dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink:0;
+    flex-grow:0;
+}
+.SlideCardBlog article{
+    width:90%;
+    height: 100%;
+    border-radius: 12px;
+    border: 5px solid #296dff;
+    display: flex;
+    align-items:center;
+    gap:15px;
+    padding: 10px;
+    
+}
+/* imagem do card no blog */
+.SlideCardBlog article .contentImgBlog{
+    height: 100%;
+    width: 30%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    object-fit: cover;
+    border-radius: 8px;
+    border:2px solid #296dff;
+    overflow: hidden;
+}
+.SlideCardBlog article .contentImgBlog img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+/* conteudo do card no blog */
+.SlideCardBlog article .contentBlog{
+    width:70%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+    gap:20px;
+}
+/* titlo do card no blog */
+.SlideCardBlog article .contentBlog div:nth-child(1){
+    width: 90%;
+    display:flex;
+    align-items: baseline;
+    justify-content:space-between;
+}
+.SlideCardBlog article .contentBlog h1{
+    color: #296dff;
+    font-size: 2em;
+}
+.SlideCardBlog article .contentBlog i{
+    color: red;
+    font-size:14px;
+    padding-left: 4px;
+    margin-top: 8px;
+}
+/* paragrafo do card no blog */
+.SlideCardBlog article .contentBlog p{
+    width:90%;
+    color:#14251d;
+    text-align: justify;
+}
+.btnConsulta{
+    border: none;
+    background: none;
+    margin-top: 5px;
+}
+.btnConsulta a{
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #296dff;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #51c48a;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.226);
+}
+.btnConsulta a:hover{
+    background-color: #296dff;
+    color: antiquewhite;
+    border: 2px solid #296dff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.411);
+    transition: .4s ease;
+}
+
+/* article sabia */
+.containerBlog > article{
+    height: auto;
+    margin: 40px 20px;
+}
+.containerBlog > article div.titleSabiaQue{
+    width: 80dvw;
+    margin: auto;
+    padding: 10px;
+}
+.containerBlog > article div.titleSabiaQue h1{
+    color: #296dff;
+    text-shadow: 2px 2px 3px #51c48b42;
+    
+}
+.containerBlog > article .sabiaQue{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    border-block: 2px solid #51c48a;
+    padding: 25px 0px;
+}
+.sabiaQue > div{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+}
+.sabiaQue > div p{
+    text-align: center;
+    font-weight: bold;
+    color: #217449;
+}
+.sabiaQue > div p i{
+    font-weight: 400;
+}
+
+
+/* medias to Blog */
+@media screen and (max-width:768px){
+    .SlideCardBlog article .contentBlog h1{
+        font-size: 1em;
+    }
+    .SlideCardBlog article .contentBlog p{
+        font-size: 14px;
+    }
+    .SlideCardBlog article .contentBlog i{
+        font-size:12px;
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+    article .sabiaQue{
+        flex-direction: column;
+        width: 90%;
+    }
+    
+}
+@media screen and (min-width:768px) and (max-width:1050px){
+    .containerBlog > div .SlideCardBlog article .contentBlog h1{
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width:472px) {
+    .SlideCardBlog{
+        height: 100%;
+    }
+    .SlideCardBlog article{
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+    }
+    
+    .SlideCardBlog article .contentImgBlog{
+        height: 200px !important;
+        width: 100% !important;
+    }
+    .SlideCardBlog article .contentBlog{
+        width:90% !important;
+        height:65%;
+        justify-content: center;
+    }
+    .SlideCardBlog article .contentBlog div:nth-child(1){
+        width: 100%;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content:center;
+    }
+    .SlideCardBlog article .contentBlog p{
+        width:100%;
+    }
+    .SlideCardBlog article .contentBlog button{
+        align-self: center;
+    }
+
+    /*animation position*/
+    .navManual, .navAuto{
+        margin-top: 160%;
+    }
+}
+
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 50dvh;
+    padding:25px 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    background-color: #217449;
+    text-decoration: none;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+footer ul p{
+    font-size: 18px;
+    color: #6091fc;
+    padding: 10px 0px;
+}
+footer ul a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+footer ul a:hover{
+    color: #225ddd;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.11);
+}
+footer ul div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

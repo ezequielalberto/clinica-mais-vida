@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100dvh;
+    width: 100vw;
+    background-color: #79ddab;
+    overflow-x: hidden;
+}
+
+
+/* acordion sobre nos */
+.accordion{
+    width:80vw;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.accordion:hover{
+    background-color:rgb(247, 247, 247);
+    transition: 0.3s;
+}
+.accordion-header{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+}
+.accordion-header span{
+    max-width: 100%;
+    white-space: nowrap;/*para nao quebrar*/
+    overflow: hidden;
+    text-overflow: ellipsis;/*caso o texto seje muito grande vai aparecer tres pontinhos*/
+}
+.accordion-header span h1{
+    font-size: 1em;
+    color: #2055c7;
+}
+.accordion-header img{
+    height: 20px;
+    width: 20px;
+}
+.accordion-body{
+    color: #444;
+    font-size: 14px;
+    text-overflow: ellipsis;/*caso o texto seje muito grande vai aparecer tres pontinhos*/
+    text-align: justify;
+    opacity: 0;
+    height: 0; 
+    overflow: hidden;
+    transition: opacity .3s; 
+}
+.accordion-body.AcordionAberto{
+    height: 100%;
+    opacity: 1;
+    padding: 5px 0px;
+}
+.arrow{
+    transition: transform .2s linear;
+}
+.accordion:has(.AcordionAberto) .arrow{
+    transform: rotate(180deg);
+}
+
+
+
+/* contacto */
+.contentContacto{
+    position: sticky;
+    top: -1%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8px;
+    padding: 10px 15px;
+    margin: 0px auto;
+    border-radius: 4px;
+    background-color: #59d396;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+.contentContacto>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.contentContacto>div a img{
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    border: 4px solid #2259cf;
+    border-radius: 50%;
+}
+.contentContacto>div a:nth-child(2){
+    height: 100%;
+    color: #296dff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.contentContacto>div a:hover{
+    color: #2055c7;
+}
+
+/* section articles */
+section{
+    width:95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 25px auto;
+}
+section > div{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+section article{
+    height: auto;
+    width: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #296dff2a;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+section article div:nth-child(1){
+    height:50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section article div img{
+    height: 100%;
+    width: auto;
+    opacity: 0.8;
+}
+section article div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+section article div h1{
+    font-size: 1em;
+    color: #2055c7;
+    text-align: center;
+    padding: 4px;
+}
+section article div p{
+    text-align: justify;
+    padding: 5px;
+}
+
+/* footer */
+
+
+footer{
+    width: 100%;
+    height: 50dvh;
+    padding:25px 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    background-color: #217449;
+    
+    margin-top: 20px;
+    text-decoration: none;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+footer ul p{
+    font-size: 18px;
+    color: #6091fc;
+    padding: 10px 0px;
+}
+footer ul a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+footer ul a:hover{
+    color: #225ddd;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.11);
+}
+footer ul div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* medias queries */
+@media screen and (max-width:712px){
+    .contentContacto>div a:nth-child(2){
+        display: none;
+    }
+}
