@@ -22,7 +22,7 @@ header{
 .attention{
     width: 90dvw;
     height: min-content;
-    position: absolute;
+    position: fixed;
     bottom: 10%;
     left: 50%;
     inset:70% 0 0 0;
@@ -1181,4 +1181,5 @@ footer ul div{
     display: flex;
     flex-direction: column;
     gap: 12px;
+
 }
